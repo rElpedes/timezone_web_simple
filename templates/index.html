@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto"
@@ -24,34 +27,28 @@
     <title>timezone</title>
   </head>
   <body>
-    <div class="w3-main" style="margin-left: 125px">
-      <div class="w3-row w3-padding-64">
-        <div class="w3-third w3-container">
-          <h1 class="w3-text-teal">Adelaide, South Australia</h1>
+    <div>
+      <div>
+        <div>
+          <h1>Adelaide, South Australia</h1>
           <p>The date/time in Adelaide is currently {{Adelaide}}</p>
         </div>
-        <div class="w3-third w3-container">
-          <p class="w3-border w3-padding-small w3-padding-32 w3-center">
-            <img
-              class="w3-image"
-              src="https://www.sciencekids.co.nz/images/pictures/flags680/Australia.jpg"
-              alt="Austrlia.jpeg"
+        <div>
+          <p>
+            <img src="{{ url_for('static', filename='images/Australia.jpeg') }}"
             />
           </p>
         </div>
       </div>
-
-      <div class="w3-row">
-        <div class="w3-third w3-container">
-          <h1 class="w3-text-teal">California, United States of America</h1>
+    
+      <div">
+        <div>
+          <h1>California, United States of America</h1>
           <p>The date/time in California is currently {{California}}</p>
         </div>
-        <div class="w3-third w3-container">
-          <p class="w3-border w3-padding-small w3-padding-32 w3-center">
-            <img
-              class="w3-image"
-              src="https://www.sciencekids.co.nz/images/pictures/flags680/United_States.jpg"
-              alt="United_States.jpeg"
+        <div>
+          <p>
+            <img src="{{ url_for('static', filename='images/United_States.jpeg') }}"
             />
           </p>
         </div>
